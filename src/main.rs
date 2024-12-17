@@ -6,7 +6,7 @@ use std::{
 };
 
 fn main() {
-    let port = if let Some(arg) = env::args().next() {
+    let port = if let Some(arg) = env::args().nth(1) {
         arg
     } else if let Ok(var) = env::var("PORT") {
         var
